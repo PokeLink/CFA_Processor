@@ -33,7 +33,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1600px;
             margin: 0 auto;
             background: rgba(255, 255, 255, 0.95);
             border-radius: 25px;
@@ -360,28 +360,28 @@
         }
 
         .rarity-D { 
-            background: linear-gradient(45deg, #8B4513, #A0522D);
-            border: 2px solid #8B4513;
+            background: linear-gradient(45deg, #abacac, #949295);
+            border: 2px solid #9ca4a1;
         }
         .rarity-C { 
-            background: linear-gradient(45deg, #228B22, #32CD32);
-            border: 2px solid #228B22;
+            background: linear-gradient(45deg, #4beb1f, #2ce003);
+            border: 2px solid #2ac404;
         }
         .rarity-B { 
-            background: linear-gradient(45deg, #4169E1, #1E90FF);
-            border: 2px solid #4169E1;
+            background: linear-gradient(45deg, #ff7b47, #f7550f);
+            border: 2px solid #fc562c;
         }
         .rarity-A { 
-            background: linear-gradient(45deg, #FFD700, #FFA500);
-            border: 2px solid #FFD700;
+            background: linear-gradient(45deg, #60efff, #17bbfc);
+            border: 2px solid #8cf4fc;
         }
         .rarity-S { 
-            background: linear-gradient(45deg, #FF4500, #FF6347);
-            border: 2px solid #FF4500;
+            background: linear-gradient(45deg, #fcec0c, #ffb900);
+            border: 2px solid #fcb404;
         }
         .rarity-SS { 
-            background: linear-gradient(45deg, #9932CC, #8A2BE2);
-            border: 2px solid #9932CC;
+            background: linear-gradient(45deg, #810dfc, #5d1fff);
+            border: 2px solid #3c44fc;
         }
 
         .manual-input-section {
@@ -410,6 +410,166 @@
 
         .input-grid .form-group:nth-child(7) {
             grid-column: span 2;
+        }
+
+        .option-buttons {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 5px;
+        }
+
+        .option-btn {
+            padding: 10px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.9);
+            color: #666;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            min-width: 80px;
+            justify-content: center;
+        }
+
+        .option-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            border-color: #667eea;
+        }
+
+        .option-btn.selected {
+            border-color: #667eea;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+        .option-btn.selected:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(102, 126, 234, 0.4);
+        }
+
+        /* Gender button specific styles */
+        .option-btn[data-category="gender"][data-value="M"] {
+            border-bottom: 3px solid #007bff;
+        }
+
+        .option-btn[data-category="gender"][data-value="M"]:hover {
+            border-bottom-color: #0056b3;
+        }
+
+        .option-btn[data-category="gender"][data-value="M"].selected {
+            background: linear-gradient(45deg, #007bff, #0056b3);
+            border-color: #007bff;
+            border-bottom: 3px solid #0056b3;
+        }
+
+        .option-btn[data-category="gender"][data-value="F"] {
+            border-bottom: 3px solid #e83e8c;
+        }
+
+        .option-btn[data-category="gender"][data-value="F"]:hover {
+            border-bottom-color: #c82333;
+        }
+
+        .option-btn[data-category="gender"][data-value="F"].selected {
+            background: linear-gradient(45deg, #e83e8c, #c82333);
+            border-color: #e83e8c;
+            border-bottom: 3px solid #c82333;
+        }
+
+        .gender-icon {
+            font-size: 16px;
+        }
+
+        /* Rarity button specific styles */
+        .option-btn.rarity-D {
+            border-bottom: 3px solid #9ca4a1;
+        }
+
+        .option-btn.rarity-D:hover {
+            border-bottom-color: #6c757d;
+        }
+
+        .option-btn.rarity-D.selected {
+            background: linear-gradient(45deg, #abacac, #949295);
+            border-color: #9ca4a1;
+            border-bottom: 3px solid #6c757d;
+        }
+
+        .option-btn.rarity-C {
+            border-bottom: 3px solid #2ac404;
+        }
+
+        .option-btn.rarity-C:hover {
+            border-bottom-color: #1e7e34;
+        }
+
+        .option-btn.rarity-C.selected {
+            background: linear-gradient(45deg, #4beb1f, #2ce003);
+            border-color: #2ac404;
+            border-bottom: 3px solid #1e7e34;
+        }
+
+        .option-btn.rarity-B {
+            border-bottom: 3px solid #fc562c;
+        }
+
+        .option-btn.rarity-B:hover {
+            border-bottom-color: #e55a2b;
+        }
+
+        .option-btn.rarity-B.selected {
+            background: linear-gradient(45deg, #ff7b47, #f7550f);
+            border-color: #fc562c;
+            border-bottom: 3px solid #e55a2b;
+        }
+
+        .option-btn.rarity-A {
+            border-bottom: 3px solid #8cf4fc;
+        }
+
+        .option-btn.rarity-A:hover {
+            border-bottom-color: #17a2b8;
+        }
+
+        .option-btn.rarity-A.selected {
+            background: linear-gradient(45deg, #60efff, #17bbfc);
+            border-color: #8cf4fc;
+            border-bottom: 3px solid #17a2b8;
+        }
+
+        .option-btn.rarity-S {
+            border-bottom: 3px solid #fcb404;
+        }
+
+        .option-btn.rarity-S:hover {
+            border-bottom-color: #e0a800;
+        }
+
+        .option-btn.rarity-S.selected {
+            background: linear-gradient(45deg, #fcec0c, #ffb900);
+            border-color: #fcb404;
+            border-bottom: 3px solid #e0a800;
+        }
+
+        .option-btn.rarity-SS {
+            border-bottom: 3px solid #3c44fc;
+        }
+
+        .option-btn.rarity-SS:hover {
+            border-bottom-color: #6f42c1;
+        }
+
+        .option-btn.rarity-SS.selected {
+            background: linear-gradient(45deg, #810dfc, #5d1fff);
+            border-color: #3c44fc;
+            border-bottom: 3px solid #6f42c1;
         }
 
         .rarity-select {
@@ -835,7 +995,7 @@
 
                     <div class="input-grid">
                         <div class="form-group">
-                            <label for="animeInfoNum">Anime Info Number:</label>
+                            <label for="animeInfoNum">Anime ID:</label>
                             <input type="number" id="animeInfoNum" placeholder="e.g., 1, 2, 3..." min="0">
                         </div>
 
@@ -856,24 +1016,40 @@
 
                         <div class="form-group">
                             <label for="charGender">Gender:</label>
-                            <select id="charGender" class="rarity-select">
-                                <option value="">Select gender</option>
-                                <option value="M">Male</option>
-                                <option value="F">Female</option>
-                            </select>
+                            <div class="option-buttons" id="genderButtons">
+                                <button type="button" class="option-btn" data-value="M" data-category="gender">
+                                    Male
+                                </button>
+                                <button type="button" class="option-btn" data-value="F" data-category="gender">
+                                    Female
+                                </button>
+                            </div>
+                            <input type="hidden" id="charGender" value="">
                         </div>
 
                         <div class="form-group">
                             <label for="charRarity">Rarity:</label>
-                            <select id="charRarity" class="rarity-select">
-                                <option value="">Select rarity</option>
-                                <option value="D">D Rank</option>
-                                <option value="C">C Rank</option>
-                                <option value="B">B Rank</option>
-                                <option value="A">A Rank</option>
-                                <option value="S">S Rank</option>
-                                <option value="SS">SS Rank</option>
-                            </select>
+                            <div class="option-buttons" id="rarityButtons">
+                                <button type="button" class="option-btn rarity-D" data-value="D" data-category="rarity">
+                                    D Rank
+                                </button>
+                                <button type="button" class="option-btn rarity-C" data-value="C" data-category="rarity">
+                                    C Rank
+                                </button>
+                                <button type="button" class="option-btn rarity-B" data-value="B" data-category="rarity">
+                                    B Rank
+                                </button>
+                                <button type="button" class="option-btn rarity-A" data-value="A" data-category="rarity">
+                                    A Rank
+                                </button>
+                                <button type="button" class="option-btn rarity-S" data-value="S" data-category="rarity">
+                                    S Rank
+                                </button>
+                                <button type="button" class="option-btn rarity-SS" data-value="SS" data-category="rarity">
+                                    SS Rank
+                                </button>
+                            </div>
+                            <input type="hidden" id="charRarity" value="">
                         </div>
 
                         <div class="form-group">
@@ -1006,6 +1182,18 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
     </div>
 
     <script>
+        // Backup API keys for automatic selection
+        const BACKUP_API_KEYS = [
+            '80afd2a5584f6259eaeb46570dbcf9b3',
+            '240307cb16ce83cf29366b25cb1e5d3a',
+            '20eff184adc7c550fa110b5df4baf118',
+            '40ac634195b38187b5a69257801a6537',
+            '5017a449957005dbd0d806330dbff391'
+        ];
+        
+        let currentBackupKeyIndex = 0;
+        let hasUserProvidedApiKey = false;
+
         // Updated borders with ImgBB alternatives (replace your borders object)
         const borders = {
             // Original imgur URLs as primary
@@ -1319,8 +1507,26 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
             return characters;
         }
 
+        // Function to get the appropriate API key
+        function getApiKey() {
+            const userApiKey = document.getElementById('apiKey').value.trim();
+            
+            if (userApiKey) {
+                return userApiKey;
+            }
+            
+            // If no user API key, use backup key
+            if (!hasUserProvidedApiKey) {
+                const backupKey = BACKUP_API_KEYS[currentBackupKeyIndex];
+                console.log(`🔑 Using backup API key ${currentBackupKeyIndex + 1}/${BACKUP_API_KEYS.length}`);
+                return backupKey;
+            }
+            
+            return null;
+        }
+
         async function processCharacters() {
-            const apiKey = document.getElementById('apiKey').value.trim();
+            const apiKey = getApiKey();
             const charCode = document.getElementById('charCode').value.trim();
 
             if (!apiKey) {
@@ -1330,14 +1536,43 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
 
             // Test API key before processing
             try {
-                const isValid = await testApiKey(apiKey);
+                let isValid = await testApiKey(apiKey);
                 if (!isValid) {
-                    showStatus('❌ Invalid API Key! Please check your ImgBB API key in the API Settings.', 'error');
-                    return;
+                    // If user's key failed and they haven't provided their own, try backup keys
+                    if (!hasUserProvidedApiKey) {
+                        console.log('🔄 User key failed, trying backup keys...');
+                        isValid = await testAndRotateBackupKeys();
+                        if (isValid) {
+                            console.log('✅ Found working backup key');
+                        } else {
+                            showStatus('❌ All API keys failed! Please check your ImgBB API key in the API Settings.', 'error');
+                            return;
+                        }
+                    } else {
+                        showStatus('❌ Invalid API Key! Please check your ImgBB API key in the API Settings.', 'error');
+                        return;
+                    }
                 }
             } catch (error) {
-                showStatus(`❌ API Key test failed: ${error.message}`, 'error');
-                return;
+                // If user's key failed and they haven't provided their own, try backup keys
+                if (!hasUserProvidedApiKey) {
+                    console.log('🔄 User key failed, trying backup keys...');
+                    try {
+                        const backupValid = await testAndRotateBackupKeys();
+                        if (backupValid) {
+                            console.log('✅ Found working backup key');
+                        } else {
+                            showStatus(`❌ All API keys failed: ${error.message}`, 'error');
+                            return;
+                        }
+                    } catch (backupError) {
+                        showStatus(`❌ All API keys failed: ${error.message}`, 'error');
+                        return;
+                    }
+                } else {
+                    showStatus(`❌ API Key test failed: ${error.message}`, 'error');
+                    return;
+                }
             }
 
             // Combine characters from both sources
@@ -1660,7 +1895,8 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
             const aliases = aliasInput ? aliasInput.split(',').map(alias => alias.trim()).filter(alias => alias.length > 0) : [];
 
             // Validation
-            if (!document.getElementById('apiKey').value.trim()) {
+            const apiKey = getApiKey();
+            if (!apiKey) {
                 alert('No API key found');
                 return;
             }
@@ -1756,7 +1992,7 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
                             </div>
                             <div class="character-details">
                                 ${char.aliases && char.aliases.length > 0 ? `Aliases: ${char.aliases.join(', ')} | ` : ''}
-                                Anime Info: ${char.animeInfoNum} | 
+                                Anime ID: ${char.animeInfoNum} | 
                                 Gender: ${char.gender} | 
                                 ID: ${char.id} | 
                                 Rarity: ${char.rarity}${detailsHtml}
@@ -1774,6 +2010,11 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
             document.getElementById('charGender').value = '';
             document.getElementById('charImage').value = '';
             document.getElementById('charRarity').value = '';
+            
+            // Clear selected buttons
+            document.querySelectorAll('.option-btn.selected').forEach(btn => {
+                btn.classList.remove('selected');
+            });
             
             // Preserve anime info number and auto-increment character ID
             document.getElementById('animeInfoNum').value = currentAnimeInfoNum;
@@ -1795,7 +2036,7 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
         }
 
         async function processSingleManualCharacter(character) {
-            const apiKey = document.getElementById('apiKey').value.trim();
+            const apiKey = getApiKey();
             
             if (!apiKey) {
                 console.warn('No API key found');
@@ -1808,20 +2049,54 @@ new charInfo('Name', ['Alias'], anime[0], 'M', 'processed_image_url', 1, 'S'),</
 
             // Test API key before processing
             try {
-                const isValid = await testApiKey(apiKey);
+                let isValid = await testApiKey(apiKey);
                 if (!isValid) {
+                    // If user's key failed and they haven't provided their own, try backup keys
+                    if (!hasUserProvidedApiKey) {
+                        console.log('🔄 User key failed, trying backup keys...');
+                        isValid = await testAndRotateBackupKeys();
+                        if (!isValid) {
+                            character.processed = false;
+                            character.processedUrl = null;
+                            character.processingError = 'All API keys failed - please check API Settings';
+                            updateManualCharactersList();
+                            return;
+                        }
+                    } else {
+                        character.processed = false;
+                        character.processedUrl = null;
+                        character.processingError = 'Invalid API key - please check API Settings';
+                        updateManualCharactersList();
+                        return;
+                    }
+                }
+            } catch (error) {
+                // If user's key failed and they haven't provided their own, try backup keys
+                if (!hasUserProvidedApiKey) {
+                    console.log('🔄 User key failed, trying backup keys...');
+                    try {
+                        const backupValid = await testAndRotateBackupKeys();
+                        if (!backupValid) {
+                            character.processed = false;
+                            character.processedUrl = null;
+                            character.processingError = `All API keys failed: ${error.message}`;
+                            updateManualCharactersList();
+                            return;
+                        }
+                    } catch (backupError) {
+                        character.processed = false;
+                        character.processedUrl = null;
+                        character.processingError = `All API keys failed: ${error.message}`;
+                        updateManualCharactersList();
+                        return;
+                    }
+                } else {
                     character.processed = false;
                     character.processedUrl = null;
-                    character.processingError = 'Invalid API key - please check API Settings';
+                    character.processingError = `API Key test failed: ${error.message}`;
                     updateManualCharactersList();
                     return;
                 }
-            } catch (error) {
-                character.processed = false;
-                character.processedUrl = null;
-                character.processingError = `API Key test failed: ${error.message}`;
-                updateManualCharactersList();
-                return;
             }
 
             try {
@@ -2013,7 +2288,33 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
         // Initialize the form when the page loads
         document.addEventListener('DOMContentLoaded', function() {
             initializeForm();
+            initializeOptionButtons();
         });
+
+        // Initialize option button functionality
+        function initializeOptionButtons() {
+            // Add click event listeners to all option buttons
+            document.querySelectorAll('.option-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    const value = this.dataset.value;
+                    
+                    // Remove selected class from all buttons in the same category
+                    document.querySelectorAll(`.option-btn[data-category="${category}"]`).forEach(btn => {
+                        btn.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked button
+                    this.classList.add('selected');
+                    
+                    // Update hidden input value
+                    const hiddenInput = document.getElementById(`char${category.charAt(0).toUpperCase() + category.slice(1)}`);
+                    if (hiddenInput) {
+                        hiddenInput.value = value;
+                    }
+                });
+            });
+        }
 
         // Handle image file upload
         async function handleImageUpload(event) {
@@ -2032,7 +2333,7 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
                 return;
             }
 
-            const apiKey = document.getElementById('apiKey').value.trim();
+            const apiKey = getApiKey();
             if (!apiKey) {
                 alert('Please enter your ImgBB API key first');
                 return;
@@ -2040,14 +2341,39 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
 
             // Test API key before uploading
             try {
-                const isValid = await testApiKey(apiKey);
+                let isValid = await testApiKey(apiKey);
                 if (!isValid) {
-                    alert('❌ Invalid API Key!\n\nPlease check your ImgBB API key in the API Settings.\n\nYou can get a free API key from: https://api.imgbb.com/');
-                    return;
+                    // If user's key failed and they haven't provided their own, try backup keys
+                    if (!hasUserProvidedApiKey) {
+                        console.log('🔄 User key failed, trying backup keys...');
+                        isValid = await testAndRotateBackupKeys();
+                        if (!isValid) {
+                            alert('❌ All API keys failed!\n\nPlease check your ImgBB API key in the API Settings.\n\nYou can get a free API key from: https://api.imgbb.com/');
+                            return;
+                        }
+                    } else {
+                        alert('❌ Invalid API Key!\n\nPlease check your ImgBB API key in the API Settings.\n\nYou can get a free API key from: https://api.imgbb.com/');
+                        return;
+                    }
                 }
             } catch (error) {
-                alert('❌ API Key test failed!\n\nError: ' + error.message + '\n\nPlease check your API key in the API Settings.');
-                return;
+                // If user's key failed and they haven't provided their own, try backup keys
+                if (!hasUserProvidedApiKey) {
+                    console.log('🔄 User key failed, trying backup keys...');
+                    try {
+                        const backupValid = await testAndRotateBackupKeys();
+                        if (!backupValid) {
+                            alert('❌ All API keys failed!\n\nError: ' + error.message + '\n\nPlease check your API key in the API Settings.');
+                            return;
+                        }
+                    } catch (backupError) {
+                        alert('❌ All API keys failed!\n\nError: ' + error.message + '\n\nPlease check your API key in the API Settings.');
+                        return;
+                    }
+                } else {
+                    alert('❌ API Key test failed!\n\nError: ' + error.message + '\n\nPlease check your API key in the API Settings.');
+                    return;
+                }
             }
 
             try {
@@ -2190,6 +2516,7 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
                 if (isValid) {
                     // Save to main API key field
                     mainApiKey.value = newApiKey;
+                    hasUserProvidedApiKey = true; // Mark that user provided their own key
                     
                     // Show success message
                     showStatus('API Key saved successfully!', 'success');
@@ -2221,14 +2548,18 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
             apiTestingOverlay.style.display = 'none';
         }
 
-        // Test API key validity
-        async function testApiKey(apiKey) {
+        // Test API key validity with backup key rotation
+        async function testApiKey(apiKey, isBackupKey = false) {
             try {
                 // Update loading text to show current step
                 const apiTestingText = document.getElementById('apiTestingText');
                 const apiTestingSubtext = document.getElementById('apiTestingSubtext');
                 
-                apiTestingText.textContent = 'Testing API Key...';
+                if (isBackupKey) {
+                    apiTestingText.textContent = `Testing Backup API Key ${currentBackupKeyIndex + 1}/${BACKUP_API_KEYS.length}...`;
+                } else {
+                    apiTestingText.textContent = 'Testing API Key...';
+                }
                 apiTestingSubtext.textContent = 'Step 1/3: Creating test image...';
                 
                 // Create a small test image (1x1 pixel)
@@ -2283,6 +2614,31 @@ new charInfo("Name", ["Alias"], anime[0], "M", "processed_image_url", 1, "S"),`;
                 console.error('❌ API Key test error:', error);
                 throw error;
             }
+        }
+
+        // Function to test backup keys and rotate if needed
+        async function testAndRotateBackupKeys() {
+            const maxAttempts = BACKUP_API_KEYS.length;
+            
+            for (let attempt = 0; attempt < maxAttempts; attempt++) {
+                const backupKey = BACKUP_API_KEYS[currentBackupKeyIndex];
+                
+                try {
+                    const isValid = await testApiKey(backupKey, true);
+                    if (isValid) {
+                        console.log(`✅ Backup API key ${currentBackupKeyIndex + 1} is working`);
+                        return true;
+                    }
+                } catch (error) {
+                    console.warn(`⚠️ Backup API key ${currentBackupKeyIndex + 1} failed: ${error.message}`);
+                }
+                
+                // Rotate to next backup key
+                currentBackupKeyIndex = (currentBackupKeyIndex + 1) % BACKUP_API_KEYS.length;
+            }
+            
+            console.error('❌ All backup API keys failed');
+            return false;
         }
 
         // Close modal when clicking outside
